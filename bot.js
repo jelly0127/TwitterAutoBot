@@ -14,11 +14,11 @@ const client = new TwitterApi({
 }, { httpAgent })
 
 
-// 定时循环发帖时间： 5 分钟一次
+// Timing loop posting time: once every 5 minutes
 const interval = 1000 * 60 * 5;
-// 推文内容
+// tweet content
 const tweetStatus = 'This is a AutoPublish test!  #AutoPublish  ';
-// 图片地址
+// img src
 const imgPath = './test.png'
 
 
@@ -33,14 +33,14 @@ async function postTweetWithImage (status) {
       text: status,
       media: { media_ids: mediaIds }
     });
-    console.log('推文已发布:', newTweet.data.text);
+    console.log('Success:', newTweet.data.text);
   } catch (error) {
-    console.error('发帖失败:', error);
+    console.error('Error:', error);
   }
 }
 postTweetWithImage(tweetStatus);
 
- // 定时循环发帖
+ // timed loop posting
 // setInterval(() => {
 //   postTweetWithImage(tweetStatus);
 // }, interval);
