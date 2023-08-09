@@ -60,6 +60,8 @@ async function postTweetWithImage (status) {
       if (err) throw err;
       console.log('File has been deleted!');
     });
+    console.log('success count:',count);
+
   } catch (error) {
     console.error('Error:', error);
   }
