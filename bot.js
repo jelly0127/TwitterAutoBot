@@ -1,5 +1,4 @@
 import axios from 'axios'
-import fs from 'fs';
 import { mergeImages } from './mergeImg.js'
 import { TwitterApi } from 'twitter-api-v2';
 import { config } from "dotenv";
@@ -51,7 +50,7 @@ const imgInit = './srcImg/show.png'
 // Timing loop posting time: once every 5 minutes
 const interval = 1000 * 60 * 5;
 
-// tweet content
+// tweet tag
 const tweetStatus = ' #推特刷粉 #推特粉丝  #推特刷粉平台 #推特刷赞 #推特涨粉 #shuazan.top ';
 
 // img src
@@ -112,9 +111,12 @@ async function postTweetWithImage (status) {
 // postTweetWithImage(tweetStatus);
 
 setInterval(async () => {
+  if (count<=200) { 
   try {
     await postTweetWithImage(tweetStatus);
   } catch (error) {
     console.error('Error:', error);
   }
+  }
+
 }, interval);
