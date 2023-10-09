@@ -24,7 +24,7 @@
     pixelmatch "^4.0.2"
     tinycolor2 "^1.6.0"
 
-"@jimp/custom@^0.22.10":
+"@jimp/custom@^0.22.10", "@jimp/custom@>=0.3.5":
   version "0.22.10"
   resolved "https://registry.npmjs.org/@jimp/custom/-/custom-0.22.10.tgz"
   integrity sha512-sPZkUYe1hu0iIgNisjizxPJqq2vaaKvkCkPoXq2U6UV3ZA1si/WVdrg25da3IcGIEV+83AoHgM8TvqlLgrCJsg==
@@ -48,14 +48,14 @@
     "@jimp/utils" "^0.22.10"
     jpeg-js "^0.4.4"
 
-"@jimp/plugin-blit@^0.22.10":
+"@jimp/plugin-blit@^0.22.10", "@jimp/plugin-blit@>=0.3.5":
   version "0.22.10"
   resolved "https://registry.npmjs.org/@jimp/plugin-blit/-/plugin-blit-0.22.10.tgz"
   integrity sha512-6EI8Sl+mxYHEIy6Yteh6eknD+EZguKpNdr3sCKxNezmLR0+vK99vHcllo6uGSjXXiwtwS67Xqxn8SsoatL+UJQ==
   dependencies:
     "@jimp/utils" "^0.22.10"
 
-"@jimp/plugin-blur@^0.22.10":
+"@jimp/plugin-blur@^0.22.10", "@jimp/plugin-blur@>=0.3.5":
   version "0.22.10"
   resolved "https://registry.npmjs.org/@jimp/plugin-blur/-/plugin-blur-0.22.10.tgz"
   integrity sha512-4XRTWuPVdMXJeclJMisXPGizeHtTryVaVV5HnuQXpKqIZtzXReCCpNGH8q/i0kBQOQMXhGWS3mpqOEwtpPePKw==
@@ -69,7 +69,7 @@
   dependencies:
     "@jimp/utils" "^0.22.10"
 
-"@jimp/plugin-color@^0.22.10":
+"@jimp/plugin-color@^0.22.10", "@jimp/plugin-color@>=0.8.0":
   version "0.22.10"
   resolved "https://registry.npmjs.org/@jimp/plugin-color/-/plugin-color-0.22.10.tgz"
   integrity sha512-e4t3L7Kedd96E0x1XjsTM6NcgulKUU66HdFTao7Tc9FYJRFSlttARZ/C6LEryGDm/i69R6bJEpo7BkNz0YL55Q==
@@ -91,7 +91,7 @@
   dependencies:
     "@jimp/utils" "^0.22.10"
 
-"@jimp/plugin-crop@^0.22.10":
+"@jimp/plugin-crop@^0.22.10", "@jimp/plugin-crop@>=0.3.5":
   version "0.22.10"
   resolved "https://registry.npmjs.org/@jimp/plugin-crop/-/plugin-crop-0.22.10.tgz"
   integrity sha512-BOZ+YGaZlhU7c5ye65RxikicXH0Ki0It6/XHISvipR5WZrfjLjL2Ke20G+AGnwBQc76gKenVcMXVUCnEjtZV+Q==
@@ -162,21 +162,21 @@
     "@jimp/utils" "^0.22.10"
     load-bmfont "^1.4.1"
 
-"@jimp/plugin-resize@^0.22.10":
+"@jimp/plugin-resize@^0.22.10", "@jimp/plugin-resize@>=0.3.5", "@jimp/plugin-resize@>=0.8.0":
   version "0.22.10"
   resolved "https://registry.npmjs.org/@jimp/plugin-resize/-/plugin-resize-0.22.10.tgz"
   integrity sha512-ixomxVcnAONXDgaq0opvAx4UAOiEhOA/tipuhFFOvPKFd4yf1BAnEviB5maB0SBHHkJXPUSzDp/73xVTMGSe7g==
   dependencies:
     "@jimp/utils" "^0.22.10"
 
-"@jimp/plugin-rotate@^0.22.10":
+"@jimp/plugin-rotate@^0.22.10", "@jimp/plugin-rotate@>=0.3.5":
   version "0.22.10"
   resolved "https://registry.npmjs.org/@jimp/plugin-rotate/-/plugin-rotate-0.22.10.tgz"
   integrity sha512-eeFX8dnRyf3LAdsdXWKWuN18hLRg8zy1cP0cP9rHzQVWRK7ck/QsLxK1vHq7MADGwQalNaNTJ9SQxH6c8mz6jw==
   dependencies:
     "@jimp/utils" "^0.22.10"
 
-"@jimp/plugin-scale@^0.22.10":
+"@jimp/plugin-scale@^0.22.10", "@jimp/plugin-scale@>=0.3.5":
   version "0.22.10"
   resolved "https://registry.npmjs.org/@jimp/plugin-scale/-/plugin-scale-0.22.10.tgz"
   integrity sha512-TG/H0oUN69C9ArBCZg4PmuoixFVKIiru8282KzSB/Tp1I0xwX0XLTv3dJ5pobPlIgPcB+TmD4xAIdkCT4rtWxg==
@@ -325,7 +325,7 @@ combined-stream@^1.0.8:
   dependencies:
     delayed-stream "~1.0.0"
 
-debug@4, debug@^4.3.4:
+debug@^4.3.4, debug@4:
   version "4.3.4"
   resolved "https://registry.npmjs.org/debug/-/debug-4.3.4.tgz"
   integrity sha512-PRWFHuSU3eDtQJPvnNY7Jcket1j0t5OuOsFzPPzsekD52Zl8qUfFIPEiswXqIvHWGVHOgX+7G/vCNNhehwxfkQ==
@@ -411,15 +411,15 @@ image-q@^4.0.0:
   dependencies:
     "@types/node" "16.9.1"
 
-inherits@2.0.3:
-  version "2.0.3"
-  resolved "https://registry.yarnpkg.com/inherits/-/inherits-2.0.3.tgz#633c2c83e3da42a502f52466022480f4208261de"
-  integrity sha512-x00IRNXNy63jwGkJmzPigoySHbaqpNuzKbBOmzK+g2OdZpQ9w+sxCN+VSB3ja7IAge2OP2qpfxTjeNcyjmW1uw==
-
 inherits@^2.0.3:
   version "2.0.4"
   resolved "https://registry.npmjs.org/inherits/-/inherits-2.0.4.tgz"
   integrity sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==
+
+inherits@2.0.3:
+  version "2.0.3"
+  resolved "https://registry.npmjs.org/inherits/-/inherits-2.0.3.tgz"
+  integrity sha512-x00IRNXNy63jwGkJmzPigoySHbaqpNuzKbBOmzK+g2OdZpQ9w+sxCN+VSB3ja7IAge2OP2qpfxTjeNcyjmW1uw==
 
 is-function@^1.0.1:
   version "1.0.2"
@@ -534,7 +534,7 @@ parse-headers@^2.0.0:
 
 path@^0.12.7:
   version "0.12.7"
-  resolved "https://registry.yarnpkg.com/path/-/path-0.12.7.tgz#d4dc2a506c4ce2197eb481ebfcd5b36c0140b10f"
+  resolved "https://registry.npmjs.org/path/-/path-0.12.7.tgz"
   integrity sha512-aXXC6s+1w7otVF9UletFkFcDsJeO7lSZBPUQhtb5O0xJe8LtYhj/GxldoL09bBj9+ZmE2hNoHqQSFMN5fikh4Q==
   dependencies:
     process "^0.11.1"
@@ -665,7 +665,7 @@ util-deprecate@^1.0.1:
 
 util@^0.10.3:
   version "0.10.4"
-  resolved "https://registry.yarnpkg.com/util/-/util-0.10.4.tgz#3aa0125bfe668a4672de58857d3ace27ecb76901"
+  resolved "https://registry.npmjs.org/util/-/util-0.10.4.tgz"
   integrity sha512-0Pm9hTQ3se5ll1XihRic3FDIku70C+iHUdT/W926rSgHV5QgXsYbKZN8MSC3tJtSkhuROzvsQjAaFENRXr+19A==
   dependencies:
     inherits "2.0.3"
