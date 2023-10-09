@@ -1,6 +1,6 @@
 import Jimp from "jimp"
 async function mergeImages (firstImagePath, secondImagePath) {
-  Jimp.read(firstImagePath)
+return await Jimp.read(firstImagePath)
     .then(firstImage => {
       return Jimp.read(secondImagePath)
         .then(secondImage => {

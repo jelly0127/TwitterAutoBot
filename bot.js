@@ -83,8 +83,8 @@ const getTitle = async () => {
 
 async function postTweetWithImage (status) {
   try {
-    await mergeImages(imgApi, imgInit);
     const title = await getTitle()
+    await mergeImages(imgApi, imgInit)
     const mediaIds = await Promise.all([
       filterNumber(count).v1.uploadMedia(imgPath),
     ]);
@@ -95,10 +95,10 @@ async function postTweetWithImage (status) {
     });
     count++
     console.log('Success:', newTweet.data.text);
-    await fs.unlink('./mergeImg/image.png', (err) => {
-      if (err) throw err;
-      console.log('File has been deleted!');
-    });
+    // await fs.unlink('./mergeImg/image.png', (err) => {
+    //   if (err) throw err;
+    //   console.log('File has been deleted!');
+    // });
     console.log('success count:', count);
 
   } catch (error) {
@@ -109,7 +109,7 @@ async function postTweetWithImage (status) {
   }
 }
 
-postTweetWithImage(tweetStatus);
+// postTweetWithImage(tweetStatus);
 
 setInterval(async () => {
   try {
