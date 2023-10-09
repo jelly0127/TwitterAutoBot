@@ -111,7 +111,7 @@ async function postTweetWithImage (status) {
 // postTweetWithImage(tweetStatus);
 
 setInterval(async () => {
-  if (count<=200) { 
+  if (count<=250) { 
   try {
     await postTweetWithImage(tweetStatus);
   } catch (error) {
