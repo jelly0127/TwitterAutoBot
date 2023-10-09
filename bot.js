@@ -52,7 +52,7 @@ const imgInit = './srcImg/show.png'
 const interval = 1000 * 60 * 5;
 
 // tweet content
-const tweetStatus = ' #推特刷粉  ';
+const tweetStatus = ' #推特刷粉 #推特粉丝  #推特刷粉平台 #推特刷赞 #推特涨粉 #shuazan.top ';
 
 // img src
 const imgPath = './mergeImg/image.png'
@@ -95,20 +95,26 @@ async function postTweetWithImage (status) {
     });
     count++
     console.log('Success:', newTweet.data.text);
-    fs.unlink('./mergeImg/image.png', (err) => {
+    await fs.unlink('./mergeImg/image.png', (err) => {
       if (err) throw err;
       console.log('File has been deleted!');
     });
-    console.log('success count:',count);
+    console.log('success count:', count);
 
   } catch (error) {
+    count++
+    console.log('count:', count);
+
     console.error('Error:', error);
   }
 }
 
-// postTweetWithImage(tweetStatus);
+postTweetWithImage(tweetStatus);
 
-// timed loop posting
-setInterval(() => {
-  postTweetWithImage(tweetStatus);
+setInterval(async () => {
+  try {
+    await postTweetWithImage(tweetStatus);
+  } catch (error) {
+    console.error('Error:', error);
+  }
 }, interval);
