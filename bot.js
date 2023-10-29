@@ -51,7 +51,7 @@ const imgInit = './srcImg/show.png'
 const interval = 1000 * 60 * 5;
 
 // tweet tag
-const tweetStatus = ' #推特刷粉 #推特粉丝  #推特刷粉平台 #推特刷赞 #推特涨粉 #shuazan.top ';
+const tweetStatus = ' #推特加粉 #推特粉丝  #推特加粉平台 #推特加赞 #推特涨粉 #Youtube #IG #shuazan.xyz ';
 
 // img src
 const imgPath = './mergeImg/image.png'
