@@ -2,13 +2,13 @@ import axios from 'axios';
 import { mergeImages } from './mergeImg.js';
 import { TwitterApi } from 'twitter-api-v2';
 import { config } from "dotenv";
-import { HttpsProxyAgent } from 'https-proxy-agent';
+// import { HttpsProxyAgent } from 'https-proxy-agent';
 import nodemailer from 'nodemailer'; 
 
 config();
 
-const proxy = process.env.HTTP_PROXY;
-const httpAgent = new HttpsProxyAgent(proxy);
+// const proxy = process.env.HTTP_PROXY;
+// const httpAgent = new HttpsProxyAgent(proxy);
 
 const accounts = Array.from({ length:  process.env.ACCOUNT_NUMBER }, (_, i) => ({
   appKey: process.env[`CONSUMER_KEY_${i + 1}`],
