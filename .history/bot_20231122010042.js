@@ -82,7 +82,7 @@ async function postTweetWithImage (status) {
         `
       };
   
-    await  transporter.sendMail(mailOptions, (err, info) => {
+      transporter.sendMail(mailOptions, (err, info) => {
         if (err) {
           console.error('邮件发送失败:', err);
         } else {
@@ -91,7 +91,7 @@ async function postTweetWithImage (status) {
       });
     }
   }
-
+}
 
 setInterval(async () => {
   // if (clientTweetCounts.every(count => count >= 50)) {
