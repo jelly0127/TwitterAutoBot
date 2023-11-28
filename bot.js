@@ -2,11 +2,12 @@ import axios from 'axios';
 import { mergeImages } from './mergeImg.js';
 import { TwitterApi } from 'twitter-api-v2';
 import { config } from "dotenv";
+import express from 'express';
 // import { HttpsProxyAgent } from 'https-proxy-agent';
 import nodemailer from 'nodemailer'; 
 
 config();
-
+const app = express();
 // const proxy = process.env.HTTP_PROXY;
 // const httpAgent = new HttpsProxyAgent(proxy);
 
@@ -69,7 +70,8 @@ async function postTweetWithImage (status) {
     console.log('Tweet count for client', clientIndex, ":", clientTweetCounts[clientIndex]);
 
   } catch (error) {
-    console.error('Error:', error);
+    clientTweetCounts[clientIndex]++;
+    console.error('Error:', error,clientIndex);
       // 发送邮件提醒
       const mailOptions = {
         from: '806352173@qq.com', // 发送邮件的邮箱
@@ -92,12 +94,13 @@ async function postTweetWithImage (status) {
     }
   }
 
+app.get('/', async (req,res) =>{
+  return res.send('Follow documentation ')
+})
 
+
+app.listen(8999, async() => {
 setInterval(async () => {
-  // if (clientTweetCounts.every(count => count >= 50)) {
-  //   process.exit(0);
-  // }
-  
   try {
     await postTweetWithImage(tweetStatus);
   } catch (error) {
@@ -106,3 +109,5 @@ setInterval(async () => {
   }
 
 }, interval);
+})
+
