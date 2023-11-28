@@ -99,7 +99,8 @@ app.get('/', async (req,res) =>{
 })
 
 
-app.listen(8999, async() => {
+app.listen(8999, async () => {
+  console.log('start');
 setInterval(async () => {
   try {
     await postTweetWithImage(tweetStatus);
