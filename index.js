@@ -7,7 +7,6 @@ import express from 'express';
 import nodemailer from 'nodemailer'; 
 
 config();
-const app = express();
 // const proxy = process.env.HTTP_PROXY;
 // const httpAgent = new HttpsProxyAgent(proxy);
 
@@ -93,14 +92,7 @@ async function postTweetWithImage (status) {
       });
     }
   }
-
-app.get('/', async (req,res) =>{
-  return res.send('Follow documentation ')
-})
-
-
-app.listen(8999, async () => {
-  console.log('start');
+console.log('start====');
 setInterval(async () => {
   try {
     await postTweetWithImage(tweetStatus);
@@ -108,7 +100,4 @@ setInterval(async () => {
     console.error('Error:', error);
 
   }
-
 }, interval);
-})
-
