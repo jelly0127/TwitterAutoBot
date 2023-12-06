@@ -28,7 +28,7 @@ const imgInit = './srcImg/show.png';
 const imgPath = './mergeImg/image.png';
 
 // 推文状态和发送间隔
-const tweetStatus = '#推特刷粉 #Youtube刷订阅 #刷粉平台 #Tiktok刷赞 #Tiktok刷粉 #Instagram刷赞 #电报拉人 #电报邀请 #刷赞网 #推特加粉 #推特粉丝 #推特加粉平台 #推特加赞 #推特涨粉 #Youtube #IG #shuazan.xyz ';
+const tweetStatus = '#推特刷粉 #推特粉丝 #推特刷赞 #刷粉平台 #推特增粉';
 const interval = 1000 * 60 * 3;
 
 // 获取一言的异步函数
